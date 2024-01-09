@@ -3,8 +3,8 @@ import * as React from "react";
 export default function IndexComponent({ movies }: { movies: any[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
-      {movies.map((m) => (
-        <div className="flex m-2">
+      {movies.map((m, i) => (
+        <div className="flex m-2" key={m.id || i}>
           <img
             src={`https://image.tmdb.org/t/p/w500${m.poster_path}`}
             className="rounded-tl-lg rounded-bl-lg aspect-w-5 aspect-h-7 w-1/4"
