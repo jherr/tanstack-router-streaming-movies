@@ -16,7 +16,7 @@ function RootComponent() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vite App</title>
-        <link rel="stylesheet" href="/output.css" />
+        <link rel="stylesheet" href="/tailwind.css" />
         <script
           type="module"
           suppressHydrationWarning
@@ -33,7 +33,7 @@ function RootComponent() {
         <script type="module" src="/@vite/client" />
         <script type="module" src="/src/entry-client.tsx" />
       </head>
-      <body className="bg-black max-w-6xl mx-auto text-white px-5 md:px-0">
+      <body className="bg-black max-w-4xl mx-auto text-white px-5 md:px-0">
         <header className="flex justify-between items-center p-4 bg-indigo-950 text-white rounded-b-2xl shadow-xl shadow-blue-600 mb-6">
           <h1 className="text-2xl flex">
             <Link
@@ -42,7 +42,9 @@ function RootComponent() {
               activeProps={{
                 className: "font-bold hello",
               }}
-              activeOptions={{ exact: true }}
+              activeOptions={{
+                includeSearch: false,
+              }}
             >
               Movies!
             </Link>

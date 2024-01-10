@@ -21,7 +21,6 @@ function SearchRoute() {
 
   return (
     <div className="p-2">
-      <h3>Search Route!</h3>
       <div className="flex gap-2">
         <input
           value={newQuery}

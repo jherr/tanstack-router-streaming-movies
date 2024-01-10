@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"tsr watch\" \"node server\" \"npx tailwindcss -i ./src/globals.css -o ./public/output.css --watch\"",
+    "dev": "concurrently \"tsr watch\" \"node server\" \"npx tailwindcss -i ./src/globals.css -o ./public/tailwind.css --watch\"",
     "build": "npm run build:tsr && npm run build:client && npm run build:server",
     "build:tsr": "tsr generate",
     "build:client": "vite build src/entry-client.tsx --outDir dist/client",
@@ -20,7 +20,8 @@
     "axios": "^1.1.3",
     "get-port": "^7.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
